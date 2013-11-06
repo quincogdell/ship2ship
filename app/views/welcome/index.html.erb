@@ -1,0 +1,30 @@
+
+<h1>Message in a Bottle</h1>
+
+
+<section>
+
+  <form class="messageForm">
+    <input type="text" name="title" id="title" placeholder="Title">
+    <br>
+    <input type="text" name="message" id="message" placeholder="Message">
+
+    <input type="submit" value="Create Message">
+
+  </form>
+
+</section>
+
+
+<section class="messages">
+  <ul class="messages-list">
+    <% @messages.each do |message| %>
+      <li class="message"><%= message.id  %></li>
+        <ul>
+          <li>Title: <%= message.title %></li>
+          <li>Message: <%= message.body %></li>
+        </ul>
+    <% end %>
+  </ul>
+
+</section>
